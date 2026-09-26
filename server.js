@@ -35,10 +35,10 @@ async function bootstrap() {
     const socketManager = new SocketManager(httpServer, services);
 
     // 4. Start Listening
-    httpServer.listen(APP_CONFIG.PORT, () => {
+    httpServer.listen(APP_CONFIG.PORT, APP_CONFIG.HOST, () => {
       console.log('='.repeat(60));
       console.log('🚀 NexusCollab - Real-Time Collaboration Workspace');
-      console.log(`🌐 Server running at: http://localhost:${APP_CONFIG.PORT}`);
+      console.log(`🌐 Server running at: http://${APP_CONFIG.HOST}:${APP_CONFIG.PORT}`);
       console.log(`📡 WebSocket endpoint active`);
       console.log(`⚡ Environment: ${APP_CONFIG.ENV}`);
       console.log('='.repeat(60));
