@@ -1,0 +1,63 @@
+/**
+ * @file cursors.css
+ * @description Real-time remote cursor badges, caret pointers, and live selection overlays
+ */
+
+/* Workspace Canvas Pointer Radar */
+.remote-pointer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1000;
+  transition: transform 0.08s cubic-bezier(0, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.remote-pointer-arrow {
+  width: 18px;
+  height: 18px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.5));
+}
+
+.remote-pointer-label {
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+  box-shadow: var(--shadow-sm);
+  margin-top: 2px;
+  margin-left: 12px;
+}
+
+/* Document Remote Caret */
+.remote-caret {
+  position: absolute;
+  pointer-events: none;
+  z-index: 15;
+  transition: top 0.05s ease-out, left 0.05s ease-out;
+}
+
+.remote-caret-line {
+  width: 2px;
+  height: 20px;
+  border-radius: 1px;
+}
+
+.remote-caret-tag {
+  position: absolute;
+  top: -18px;
+  left: 0;
+  padding: 1px 6px;
+  border-radius: var(--radius-xs);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0.9;
+}

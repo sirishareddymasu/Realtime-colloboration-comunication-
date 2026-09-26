@@ -1,0 +1,15 @@
+/**
+ * @file main.css
+ * @description Master CSS stylesheet importing core variables, layout, and component modules
+ */
+
+@import './variables.css';
+@import './base.css';
+@import './layout.css';
+@import './components/header.css';
+@import './components/sidebar.css';
+@import './components/editor.css';
+@import './components/chat.css';
+@import './components/cursors.css';
+@import './components/modal.css';
+@import './components/toast.css';
